@@ -1,14 +1,11 @@
 function createMultiplyTable (left, right) {
-    if(check(left,right)==""){
-        return "";
-    }
     var str="";
     str=concat(left,right);
     return str;
 }
-function check(left,right){
-    if(left>right){
-        return "";
+function check(left,right) {
+    if(left<right){
+        return true;
     }
 }
 function concat(left,right){
@@ -32,4 +29,7 @@ function getDiviStr(left,i,j){
     return diviStr;
 }
 
-module.exports = createMultiplyTable;
+module.exports ={ 
+    createMultiplyTable,
+    check
+};
